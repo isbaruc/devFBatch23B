@@ -1,6 +1,8 @@
 const word = "papap";
 
-const splitWord = word.split("");
+const wordToLower = word.toLowerCase();
+
+const splitWord = wordToLower.split("");
 
 let noPalindromo = true;
 

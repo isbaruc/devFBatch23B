@@ -1,0 +1,22 @@
+// const phrase = "anita lava la tina";
+const phrase = "Alí Tomó Tila";
+
+const prhaseToLower = phrase.toLowerCase();
+
+const phraseWithoutSpaces = prhaseToLower.replaceAll(" ", "");
+
+const splitPrhase = phraseWithoutSpaces.split("");
+
+let noPalindromo = true;
+
+const palindrome = (prhase) => {
+	for (let i = splitPrhase.length; i > 0; i--) {
+		splitPrhase[splitPrhase.length - i] != splitPrhase[i - 1] ? (noPalindromo = true) : (noPalindromo = false);
+		console.log(`Letra splitWord: ${splitPrhase[splitPrhase.length - i]} \nLetra reverseWord: ${splitPrhase[i - 1]} \nValor de i: ${i} `);
+	}
+
+	if (noPalindromo === true) console.log("Esta frase no es un palindromo");
+	else console.log("Esta frase si es palindromo");
+};
+
+palindrome(phrase);
