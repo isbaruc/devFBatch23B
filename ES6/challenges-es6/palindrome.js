@@ -12,8 +12,8 @@ const palindrome = (palabra) => {
 		// console.log(`Letra splitWord: ${splitWord[splitWord.length - i]} \nLetra reverseWord: ${splitWord[i - 1]} \nValor de i: ${i} `);
 	}
 
-	if (noPalindromo === true) console.log("Esta palabra no es un palindromo");
-	else console.log("Esta palabra si es palindromo");
+	if (noPalindromo === true) return console.log("Esta palabra no es un palindromo");
+	else return console.log("Esta palabra si es palindromo");
 };
 
 palindrome(word);
