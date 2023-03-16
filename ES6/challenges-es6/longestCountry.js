@@ -9,7 +9,7 @@ const longestCountry = (countries) => {
 
 	for (let i = 0; i < countries.length; i++) {
 		countriesLength.push(countries[i].length);
-		console.log(`Pais: ${countries[i]} \nNumero de letras ${countries[i].length}`);
+		//console.log(`Pais: ${countries[i]} \nNumero de letras ${countries[i].length}`);
 	}
 	// return console.log(countriesLength);
 	// return console.log(countries.filter(country => countries.length > 10 ));
