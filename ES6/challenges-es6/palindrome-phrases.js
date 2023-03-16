@@ -1,26 +1,30 @@
 // const phrase = "anita lava la tina";
-const phrase = "Alí tomó tila";
+const phrase = "Alí TomÓ tila";
 
 const normalizePhrase = (phrase) => {
 	// return console.log(prhase.normalize("NFD").replace(/([aeiou])\u0301|(u)[\u0301\u0308]/gi, "$1$2"));
-	return phrase.normalize("NFD").replace(/\u0301/gi, "");
+	return phrase
+		.normalize("NFD") //Normaliza por la forma Canocical Decomposition
+		.replace(/\u0301/gi, "") //Elimina acentos
+		.replaceAll(" ", ""); //Elimina los espacios
 	/* RegExp -> https://www.tutorialspoint.com/javascript_regexp/javascript_regexp_meta_inside.htm
 	Rango acentos Unicode -> https://symbl.cc/es/unicode/blocks/combining-diacritical-marks/ */
 };
 
 const toLowerCase = (normalizedPhrase) => {
-	const phraseToLower = normalizePhrase(normalizedPhrase).toLowerCase();
+	/* const phraseToLower = normalizePhrase(normalizedPhrase).toLowerCase();
 	const phraseWithoutSpaces = phraseToLower.replaceAll(" ", "");
 
 	// console.log(phraseWithoutSpaces);
 
-	return phraseWithoutSpaces;
+	return phraseWithoutSpaces; */
+	return normalizePhrase(normalizedPhrase).toLowerCase();
 };
 
 const splitPhrase = (lowerPhrase) => {
-	const splitedPhrase = toLowerCase(lowerPhrase).split("");
+	// const splitedPhrase = toLowerCase(lowerPhrase).split("");
 
-	return splitedPhrase;
+	return toLowerCase(lowerPhrase).split("");
 };
 
 const palindrome = (phrase) => {
