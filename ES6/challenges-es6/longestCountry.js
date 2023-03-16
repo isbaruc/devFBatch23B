@@ -6,7 +6,7 @@ const longestCountry = (countries) => {
 	for (let i = 0; i < countries.length; i++) {
 		countriesLength.push(countries[i].length);
 	}
-	console.log(`El país con el nombre más largo es: ${countries.filter((country) => country.length >= Math.max(...countriesLength)).toString()}`); //Se agrega apply Math.max.apply(null, countriesLength)para compatibilidad de los navegadores. Act. Spread Operator sustituye el uso de apply
+	return console.log(`El país con el nombre más largo es: ${countries.filter((country) => country.length >= Math.max(...countriesLength)).toString()}`); //Se agrega apply Math.max.apply(null, countriesLength)para compatibilidad de los navegadores. Act. Spread Operator sustituye el uso de apply
 };
 
 longestCountry(countries);
